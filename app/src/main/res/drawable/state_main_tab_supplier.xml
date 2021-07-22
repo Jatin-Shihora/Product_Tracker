@@ -1,0 +1,6 @@
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:constantSize="true">
+    <item android:drawable="@drawable/ic_main_tab_supplier_accent" android:state_enabled="true" android:state_selected="true" />
+    <item android:drawable="@drawable/ic_main_tab_supplier_default" android:state_enabled="true" android:state_selected="false" />
+</selector>

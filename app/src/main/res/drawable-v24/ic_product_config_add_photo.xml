@@ -1,0 +1,31 @@
+<!--
+  ~ Copyright 2018 Kaushik N. Sanji
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~    http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportHeight="490.667"
+    android:viewportWidth="490.667">
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M448,128h-67.6l-39,-42.7H192v64h-64v64H64v213.3c0,23.5 19.2,42.7 42.7,42.7H448c23.5,0 42.7,-19.2 42.7,-42.7v-256C490.7,147.2 471.5,128 448,128zM277.3,405.3c-58.9,0 -106.7,-47.8 -106.7,-106.7S218.5,192 277.3,192S384,239.8 384,298.7S336.2,405.3 277.3,405.3z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M64,192l42.7,0l0,-64l64,0l0,-42.7l-64,0l0,-64l-42.7,0l0,64l-64,0l0,42.7l64,0z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M277.3,230.4c-37.8,0 -68.3,30.5 -68.3,68.3h0c0,37.8 30.5,68.3 68.3,68.3c37.8,0 68.3,-30.5 68.3,-68.3S315.1,230.4 277.3,230.4z" />
+</vector>

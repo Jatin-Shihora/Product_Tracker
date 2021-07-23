@@ -400,7 +400,7 @@
 &lt;br/&gt;&lt;br/&gt;Camera and Album icons used are made by &lt;a href=&quot;https://www.flaticon.com/authors/pixel-perfect&quot; title=&quot;pixel-perfect&quot;&gt;Pixel-Perfect&lt;/a&gt; from &lt;a href=&quot;https://www.flaticon.com/&quot; title=&quot;Flaticon&quot;&gt;www.flaticon.com&lt;/a&gt; is licensed by &lt;a href=&quot;http://creativecommons.org/licenses/by/3.0/&quot; title=&quot;Creative Commons BY 3.0&quot; target=&quot;_blank&quot;&gt;CC 3.0 BY&lt;/a&gt;.&lt;br/&gt;
     </string>
     <!-- Link to the course -->
-    <string name="about_link_play_store" translatable="false"></string>
+    <string name="about_link_play_store" translatable="false"> </string>
     <!-- Link to the developer's portfolio -->
     <string name="about_link_github_profile" translatable="false">https://github.com/Jatin-Shihora</string>
     <!-- Link to the developer's bio -->

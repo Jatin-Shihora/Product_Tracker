@@ -404,7 +404,7 @@
     <!-- Link to the developer's portfolio -->
     <string name="about_link_github_profile" translatable="false">https://github.com/Jatin-Shihora</string>
     <!-- Link to the developer's bio -->
-    <string name="about_link_linkedin_profile" translatable="false">www.linkedin.com/in/jatin-shihora</string>
+    <string name="about_link_linkedin_profile" translatable="false">https://linkedin.com/in/jatin-shihora</string>
 
 
 </resources>

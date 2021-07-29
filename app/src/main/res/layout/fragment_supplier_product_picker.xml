@@ -9,7 +9,7 @@
     android:fillViewport="true"
     >
 
-    <androidx.constraintlayout.widget.Guideline
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -38,6 +38,6 @@
             app:layout_constrainedWidth="true"
             tools:text="@tools:sample/full_names" />
 
-    </androidx.constraintlayout.widget.Guideline>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>

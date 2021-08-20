@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+qq
         <!-- The About Activity of the App -->
         <activity
             android:name=".ui.about.AboutActivity"

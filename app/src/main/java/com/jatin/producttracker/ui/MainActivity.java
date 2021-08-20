@@ -153,7 +153,6 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         //Get the registered Fragment for the Position
         Fragment paperFragment = mPagerAdapter.getRegisteredFragment(newPosition);
 
-        //TODO: SalesListFragment, ProductListFragment ,SuppliersListFragment
         if (paperFragment instanceof SalesListFragment){
             //When the Fragment is SalesListFragment, hide the Fab as there is no purpose for it
             mFabAdd.hide();
@@ -288,11 +287,18 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
      * */
     private void fabAddButtonClicked(){
         //Retrieving the Fragment currently shown
-        Fragment paperFragment =getCurrentPagerFragment();
+        Fragment pagerFragment =getCurrentPagerFragment();
 
-        if (paperFragment!=null){
+        if (pagerFragment!=null){
             //When we have a Fragment
 
+            //Get the Presenter for the Pager Fragment
+            PagerPresenter presenter = ((PagerView) pagerFragment ).getPresenter();
+
+            if (presenter != null){
+                //when we have the Presenter, initiate the FAB click action via the interface method
+                presenter.onFabAddClicked();
+            }
         }
     }
 
@@ -302,11 +308,18 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
      **/
     private void onRefreshMenuClicked(){
         //Retrieving the Fragment currently shown
-        Fragment paperFragment = getCurrentPagerFragment();
+        Fragment pagerFragment = getCurrentPagerFragment();
 
-        if(paperFragment != null){
+        if(pagerFragment != null){
             //When we have a fragment
 
+            //Get the Presenter for the Pager Fragment
+            PagerPresenter presenter = ((PagerView) pagerFragment).getPresenter();
+
+            if (presenter != null){
+                //Wen we have the Presenter, initiate the Refresh Menu action via the interface method
+                presenter.onRefreshMenuClicked();
+            }
         }
     }
 

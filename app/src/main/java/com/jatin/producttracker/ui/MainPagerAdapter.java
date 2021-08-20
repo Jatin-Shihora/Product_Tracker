@@ -14,17 +14,20 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.Group;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.google.android.material.tabs.TabLayout;
 import com.jatin.producttracker.R;
+import com.jatin.producttracker.data.local.LoaderProvider;
 import com.jatin.producttracker.ui.inventory.SalesListFragment;
 import com.jatin.producttracker.ui.inventory.SalesListPresenter;
 import com.jatin.producttracker.ui.products.ProductListFragment;
 import com.jatin.producttracker.ui.products.ProductListPresenter;
 import com.jatin.producttracker.ui.suppliers.SupplierListFragment;
 import com.jatin.producttracker.ui.suppliers.SupplierListPresenter;
+import com.jatin.producttracker.utils.InjectorUtility;
 
 import java.util.Set;
 
@@ -131,15 +134,12 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
      * @param fragment Any Fragment Instances of this {@link MainPagerAdapter}
      * */
     private void initPresenter(Fragment fragment){
-        if(fragment instanceof ProductListFragment){
+        if (fragment instanceof ProductListFragment) {
             //Creating the ProductListFragment's Presenter
-            ProductListPresenter presenter = new ProductListPresenter();
-        }else if (fragment instanceof SupplierListFragment){
+        } else if (fragment instanceof SupplierListFragment) {
             //Creating the SupplierListFragment's Presenter
-            SupplierListPresenter presenter = new SupplierListPresenter();
-        }else if (fragment instanceof SalesListFragment){
+        } else if (fragment instanceof SalesListFragment) {
             //Creating the SalesListFragment's Presenter
-            SalesListPresenter presenter = new SalesListPresenter();
         }
     }
 

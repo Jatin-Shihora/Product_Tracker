@@ -46,7 +46,7 @@ public class SalesLite implements Parcelable {
     };
 
     //The primary Key/Id of the product
-    private final int mProductId;
+    public final int mProductId;
     //The primary Key/Id of top supplier
     private final int mSupplierId;
     //The Name of the product
@@ -64,7 +64,7 @@ public class SalesLite implements Parcelable {
     //The selling price of the product by the top supplier
     private final float mSupplierUnitPrice;
     //The available Quantity to Sell at the Top supplier
-    private final int mSupplierAvailableQuantity;
+    public final int mSupplierAvailableQuantity;
     //The total available to Sell Quantity of the Product
     private final int mTotalAvailableQuantity;
 

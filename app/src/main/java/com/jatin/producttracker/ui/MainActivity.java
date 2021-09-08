@@ -151,9 +151,9 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         mPagerAdapter.changeTabView(tab, true);
 
         //Get the registered Fragment for the Position
-        Fragment paperFragment = mPagerAdapter.getRegisteredFragment(newPosition);
+        Fragment pagerFragment = mPagerAdapter.getRegisteredFragment(newPosition);
 
-        if (paperFragment instanceof SalesListFragment){
+        if (pagerFragment instanceof SalesListFragment){
             //When the Fragment is SalesListFragment, hide the Fab as there is no purpose for it
             mFabAdd.hide();
         }else {
@@ -161,9 +161,9 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
             mFabAdd.show();
 
             //Setting the Fab Background color based on the Fragment
-            if(paperFragment instanceof ProductListFragment) {
+            if(pagerFragment instanceof ProductListFragment) {
                 mFabAdd.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.mainProductListFabColor)));
-            }else if(paperFragment instanceof SupplierListFragment){
+            }else if(pagerFragment instanceof SupplierListFragment){
                 mFabAdd.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(this,R.color.mainSupplierListFabColor)));
             }
         }

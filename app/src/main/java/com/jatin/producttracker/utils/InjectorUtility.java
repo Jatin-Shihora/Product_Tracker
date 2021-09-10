@@ -2,6 +2,7 @@ package com.jatin.producttracker.utils;
 
 import android.content.Context;
 
+import com.jatin.producttracker.data.local.StoreFileRepository;
 import com.jatin.producttracker.data.local.StoreLocalRepository;
 import com.jatin.producttracker.data.local.StoreRepository;
 
@@ -31,6 +32,26 @@ public final class InjectorUtility {
         return StoreLocalRepository.getInstance(context.getContentResolver(), AppExecutors.getInstance());
     }
 
+    /**
+     * Method that provides/injects the {@link StoreFileRepository} instance which
+     * deals with the Files.
+     *
+     * @param context A {@link Context} to derive the {@link android.content.ContentResolver} instance
+     * @return Instance of {@link StoreFileRepository}
+     */
+    private static StoreFileRepository provideFileRepository(Context context) {
+        return StoreFileRepository.getInstance(context.getContentResolver(), AppExecutors.getInstance());
+    }
 
+    /**
+     * Method that provides/injects the {@link StoreRepository} instance which
+     * interfaces with {@link StoreLocalRepository} and {@link StoreFileRepository}
+     *
+     * @param context A {@link Context} to derive the {@link android.content.ContentResolver} instance
+     * @return Instance of {@link StoreRepository}
+     */
+    public static StoreRepository provideStoreRepository(Context context) {
+        return StoreRepository.getInstance(provideLocalRepository(context), provideFileRepository(context));
+    }
 
 }

@@ -51,7 +51,7 @@ public class SupplierContact implements Parcelable,Cloneable {
     //The Type of the Supplier Contact
     private final String mType;
     //Value of the Contact
-    private String mValue;
+    public String mValue;
     //Denotes whether the Contact is the default contact for the Supplier or not
     private boolean mIsDefault;
 

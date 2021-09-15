@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * Contract Interface for the App's File Management . File communication is implemented by {@link StoreRepository}
- * and {@@link StoreFileRepository}
+ * and {@link StoreFileRepository}
  *
  * @author Jatin C Shihora
  * */

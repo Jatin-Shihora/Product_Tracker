@@ -8,6 +8,11 @@ import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.loader.content.CursorLoader;
 
+import com.jatin.producttracker.data.local.contracts.ProductContract;
+import com.jatin.producttracker.data.local.contracts.SalesContract;
+import com.jatin.producttracker.data.local.contracts.SupplierContract;
+import com.jatin.producttracker.data.local.utils.QueryArgsUtility;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.ref.WeakReference;
@@ -75,7 +80,7 @@ public class LoaderProvider {
         }
 
         //Returning the CursorLoader instance based on the LoaderType
-        /*switch (loaderType) {
+        switch (loaderType) {
             case PRODUCT_LIST_TYPE:
                 //Returning the Cursor Loader to list of Products sorted by its SKU
                 return new CursorLoader(
@@ -106,7 +111,7 @@ public class LoaderProvider {
                         null,
                         ProductContract.Product.getQualifiedColumnName(ProductContract.Product.COLUMN_ITEM_SKU)
                 );
-        }*/
+        }
 
         //Returning null when invalid Loader Type is passed
         //(This can never occur because of the annotated parameter in use)

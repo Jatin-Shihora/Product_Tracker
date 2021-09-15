@@ -20,8 +20,6 @@ import java.util.List;
 
 /**
  * Contract Interface for the View {@link ProductConfigActivityFragment} and its Presenter {@link ProductConfigPresenter}.
- *
- * @author Kaushik N Sanji
  */
 public interface ProductConfigContract {
 

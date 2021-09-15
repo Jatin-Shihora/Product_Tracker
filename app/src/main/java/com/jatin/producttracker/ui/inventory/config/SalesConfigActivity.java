@@ -24,6 +24,7 @@ import com.jatin.producttracker.ui.products.config.ProductConfigActivity;
 import com.jatin.producttracker.ui.products.config.ProductConfigContract;
 import com.jatin.producttracker.ui.suppliers.config.SupplierConfigActivity;
 import com.jatin.producttracker.utils.InjectorUtility;
+import com.jatin.producttracker.workers.ImageDownloaderFragment;
 
 import static android.app.Activity.*;
 
@@ -342,14 +343,14 @@ public class SalesConfigActivity extends AppCompatActivity implements SalesConfi
         //Setting the Transition Name on the ImageView for Shared Element Transition
         ViewCompat.setTransitionName(mImageViewItemPhoto, imageUri);
         //Load the Selected Image for the Product
-/*        ImageDownloaderFragment.newInstance(getSupportFragmentManager(), mImageViewItemPhoto.getId())
+        ImageDownloaderFragment.newInstance(getSupportFragmentManager(), mImageViewItemPhoto.getId())
                 .setOnSuccessListener(bitmap -> {
                     if (mIsEnterTransitionPostponed) {
                         //Start the Postponed transition if it was postponed
                         supportStartPostponedEnterTransition();
                     }
                 })
-                .executeAndUpdate(mImageViewItemPhoto, imageUri, mImageViewItemPhoto.getId(), getSupportLoaderManager());*/
+                .executeAndUpdate(mImageViewItemPhoto, imageUri, mImageViewItemPhoto.getId(), getSupportLoaderManager());
     }
 
     /**

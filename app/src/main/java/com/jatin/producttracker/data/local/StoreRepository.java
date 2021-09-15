@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 
 import com.jatin.producttracker.data.local.models.Product;
 import com.jatin.producttracker.data.local.models.ProductImage;
+import com.jatin.producttracker.data.local.models.ProductLite;
 import com.jatin.producttracker.data.local.models.ProductSupplierSales;
 import com.jatin.producttracker.data.local.models.Supplier;
 import com.jatin.producttracker.data.local.models.SupplierContact;
@@ -231,11 +232,11 @@ public class StoreRepository implements DataRepository,FileRepository {
      *                      information for all the Products in the database is retrieved.
      * @param queryCallback The Callback to be implemented by the caller to receive the result.
      */
-/*    @Override
+    @Override
     public void getShortProductInfoForProducts(@Nullable List<String> productIds, @NonNull GetQueryCallback<List<ProductLite>> queryCallback) {
         mLocalDataSource.getShortProductInfoForProducts(productIds, queryCallback);
     }
-*/
+
     /**
      * Method that adds a new {@link Supplier} entry into the database.
      *
@@ -356,7 +357,7 @@ public class StoreRepository implements DataRepository,FileRepository {
      * @param operationsCallback The Callback to be implemented by the caller to receive the result.
      */
     @Override
-    public void deleteImageFiles(List<String> fileContentUriList, FileRepository.FileOperationsCallback<Boolean> operationsCallback) {
+    public void deleteImageFiles(List<String> fileContentUriList, FileOperationsCallback<Boolean> operationsCallback) {
         mLocalFileSource.deleteImageFiles(fileContentUriList, operationsCallback);
     }
 

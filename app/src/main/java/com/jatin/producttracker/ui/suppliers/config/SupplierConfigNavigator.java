@@ -43,7 +43,7 @@ public interface SupplierConfigNavigator {
     /**
      * Method invoked when the user clicks on the "Add Item" button, present under "Supplier Items"
      * to add/link items to the Supplier. This should launch the
-     * {@link SupplierProductPickerActivity}
+     * {@@link SupplierProductPickerActivity}
      * to pick the Products for the Supplier to sell.
      *
      * @param productLiteList ArrayList of Products {@link ProductLite} already picked for the Supplier to sell.

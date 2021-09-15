@@ -180,24 +180,6 @@ public class SalesProcurementActivityFragment extends Fragment implements SalesP
         }
     }
 
-    /**
-     * Called to ask the fragment to save its current dynamic state, so it
-     * can later be reconstructed in a new instance of its process is
-     * restarted.  If a new instance of the fragment later needs to be
-     * created, the data you place in the Bundle here will be available
-     * in the Bundle given to {@link #onCreate(Bundle)},
-     * {@link #onCreateView(LayoutInflater, ViewGroup, Bundle)}, and
-     * {@link #onActivityCreated(Bundle)}.
-     * <p>
-     * <p>This corresponds to {@link FragmentActivity#onSaveInstanceState(Bundle, PersistableBundle)}
-     * Activity.onSaveInstanceState(Bundle)} and most of the discussion there
-     * applies here as well.
-     *
-     */
-   // @Override
-    public void onSaveInstanceState() {
-        onSaveInstanceState();
-    }
 
     /**
      * Called to ask the fragment to save its current dynamic state, so it

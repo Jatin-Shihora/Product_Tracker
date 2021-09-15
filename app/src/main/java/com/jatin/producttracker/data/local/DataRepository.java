@@ -10,6 +10,7 @@ import androidx.annotation.StringRes;
 
 import com.jatin.producttracker.data.local.models.Product;
 import com.jatin.producttracker.data.local.models.ProductImage;
+import com.jatin.producttracker.data.local.models.ProductLite;
 import com.jatin.producttracker.data.local.models.ProductSupplierSales;
 import com.jatin.producttracker.data.local.models.Supplier;
 import com.jatin.producttracker.data.local.models.SupplierContact;
@@ -20,7 +21,7 @@ import java.util.List;
 /**
  * Contract Interface for the App's Database management. Database communication is
  * implemented by {@link StoreRepository}
- * and {@@link StoreLocalRepository}
+ * and {@link StoreLocalRepository}
  *
  * @author Jatin C Shihora
  */
@@ -156,7 +157,7 @@ public interface DataRepository {
      *                      information for all the Products in the database is retrieved.
      * @param queryCallback The Callback to be implemented by the caller to receive the result.
      */
-   // void getShortProductInfoForProducts(@Nullable List<String> productIds, @NonNull GetQueryCallback<List<ProductLite>> queryCallback);
+    void getShortProductInfoForProducts(@Nullable List<String> productIds, @NonNull GetQueryCallback<List<ProductLite>> queryCallback);
 
     /**
      * Method that adds a new {@link com.jatin.producttracker.data.local.models.Supplier} entry into the database.

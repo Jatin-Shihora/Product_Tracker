@@ -1183,7 +1183,7 @@ public class StoreLocalRepository implements DataRepository {
      *                      information for all the Products in the database is retrieved.
      * @param queryCallback The Callback to be implemented by the caller to receive the result.
      */
-    /*@Override*/
+    @Override
     public void getShortProductInfoForProducts(@Nullable List<String> productIds,
                                                @NonNull GetQueryCallback<List<ProductLite>> queryCallback) {
         //Executing on the Disk Thread

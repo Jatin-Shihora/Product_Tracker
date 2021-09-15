@@ -17,6 +17,7 @@ import com.jatin.producttracker.data.local.models.ProductImage;
 import com.jatin.producttracker.data.local.models.ProductSupplierSales;
 import com.jatin.producttracker.ui.products.config.DefaultPhotoChangeListener;
 import com.jatin.producttracker.utils.InjectorUtility;
+import com.jatin.producttracker.workers.ImageDownloaderFragment;
 
 /**
  * Activity that inflates the layout 'R.layout.activity_sales_procurement' which
@@ -237,13 +238,13 @@ public class SalesProcurementActivity extends AppCompatActivity implements Sales
         //Setting the Transition Name on the ImageView for Shared Element Transition
         ViewCompat.setTransitionName(mImageViewItemPhoto, imageUri);
         //Load the Selected Image for the Product
-/*        ImageDownloaderFragment.newInstance(getSupportFragmentManager(), mImageViewItemPhoto.getId())
+        ImageDownloaderFragment.newInstance(getSupportFragmentManager(), mImageViewItemPhoto.getId())
                 .setOnSuccessListener(bitmap -> {
                     if (mIsEnterTransitionPostponed) {
                         //Start the Postponed transition if it was postponed
                         supportStartPostponedEnterTransition();
                     }
                 })
-                .executeAndUpdate(mImageViewItemPhoto, imageUri, mImageViewItemPhoto.getId(), getSupportLoaderManager());*/
+                .executeAndUpdate(mImageViewItemPhoto, imageUri, mImageViewItemPhoto.getId(), getSupportLoaderManager());
     }
 }

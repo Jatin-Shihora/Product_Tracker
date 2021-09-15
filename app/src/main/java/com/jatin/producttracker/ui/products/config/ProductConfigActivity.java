@@ -21,12 +21,13 @@ import com.jatin.producttracker.R;
 import com.jatin.producttracker.data.local.models.ProductImage;
 import com.jatin.producttracker.ui.products.image.ProductImageActivity;
 import com.jatin.producttracker.utils.InjectorUtility;
+import com.jatin.producttracker.workers.ImageDownloaderFragment;
 
 import java.util.ArrayList;
 
 /**
  * Activity that inflates the layout 'R.layout.activity_product_config' which
- * displays a content fragment inflated by {@@link ProductConfigActivityFragment}.
+ * displays a content fragment inflated by {@link ProductConfigActivityFragment}.
  * This allows to configure a New Product in the database and also edit an existing Product.
  *
  * @author Jatin C Shihora
@@ -315,14 +316,14 @@ public class ProductConfigActivity extends AppCompatActivity
         //Setting the Transition Name on the ImageView for Shared Element Transition
         ViewCompat.setTransitionName(mImageViewItemPhoto, imageUri);
         //Load the Selected Image for the Product
-/*        ImageDownloaderFragment.newInstance(getSupportFragmentManager(), mImageViewItemPhoto.getId())
+        ImageDownloaderFragment.newInstance(getSupportFragmentManager(), mImageViewItemPhoto.getId())
                 .setOnSuccessListener(bitmap -> {
                     if (mIsEnterTransitionPostponed) {
                         //Start the Postponed transition if it was postponed
                         supportStartPostponedEnterTransition();
                     }
                 })
-                .executeAndUpdate(mImageViewItemPhoto, imageUri, mImageViewItemPhoto.getId(), getSupportLoaderManager());*/
+                .executeAndUpdate(mImageViewItemPhoto, imageUri, mImageViewItemPhoto.getId(), getSupportLoaderManager());
         //Expanding the AppBar to reveal the Photo
         mAppBarLayout.setExpanded(true);
     }

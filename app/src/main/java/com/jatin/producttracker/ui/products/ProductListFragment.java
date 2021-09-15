@@ -40,6 +40,7 @@ import com.jatin.producttracker.ui.products.config.ProductConfigActivity;
 import com.jatin.producttracker.utils.ColorUtility;
 import com.jatin.producttracker.ui.products.ProductListContract.Presenter;
 import com.jatin.producttracker.utils.SnackbarUtility;
+import com.jatin.producttracker.workers.ImageDownloaderFragment;
 
 import androidx.constraintlayout.widget.Group;
 
@@ -612,9 +613,9 @@ public class ProductListFragment extends Fragment implements ProductListContract
                 //Set Barcode typeface for the SKU
                 mTextViewProductSku.setTypeface(mProductSkuTypeface);
                 //Download and Bind the Product Photo at the position
-                /*ImageDownloaderFragment.newInstance(
+                ImageDownloaderFragment.newInstance(
                         ((FragmentActivity) mImageViewProductPhoto.getContext()).getSupportFragmentManager(), position)
-                        .executeAndUpdate(mImageViewProductPhoto, productLite.getDefaultImageUri(), position);*/
+                        .executeAndUpdate(mImageViewProductPhoto, productLite.getDefaultImageUri(), position);
                 //Bind the Product Category
                 mTextViewProductCategory.setText(productLite.getCategory());
             }

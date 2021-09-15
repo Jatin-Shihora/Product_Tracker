@@ -1,5 +1,6 @@
 package com.jatin.producttracker.ui.inventory;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -22,6 +23,7 @@ import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.ListAdapter;
@@ -36,6 +38,7 @@ import com.jatin.producttracker.ui.inventory.config.SalesConfigActivity;
 import com.jatin.producttracker.utils.ColorUtility;
 import com.jatin.producttracker.utils.SnackbarUtility;
 import com.jatin.producttracker.utils.TextAppearanceUtility;
+import com.jatin.producttracker.workers.ImageDownloaderFragment;
 
 import java.util.ArrayList;
 import java.util.Currency;
@@ -199,7 +202,7 @@ public class SalesListFragment extends Fragment implements SalesListContract.Vie
 
     /**
      * Called when the fragment is visible to the users and actively running .
-     * This is generally tied to {//link Activity#onResume() Activity.onResume()} of the containing Activity's lifecycle
+     * This is generally tied to {@link Activity# Activity.onResume()} of the containing Activity's lifecycle
      * */
     @Override
     public void onResume() {
@@ -253,7 +256,7 @@ public class SalesListFragment extends Fragment implements SalesListContract.Vie
 
     /**
      * Receive the result from a previous call to {@link #startActivityForResult(Intent, int)}.
-     * This follows the related Activity API as described there in {//  link androidx.fragment.app.FragmentActivity#onActivityResult(int, int, Intent)}.
+     * This follows the related Activity API as described there in {@link androidx.fragment.app.FragmentActivity onActivityResult(int, int, Intent)}.
      *
      * @param requestCode The integer request code originally supplied to startActivityForResult(), allowing
      *                    you to identify who this result came from.
@@ -591,9 +594,9 @@ public class SalesListFragment extends Fragment implements SalesListContract.Vie
             //Set Barcode typeface for the SKU
             mTextViewProductSku.setTypeface(mProductSkuTypeface);
             //Download and Bind the Product Photo at the position
-            /*ImageDownloaderFragment.newInstance(
+            ImageDownloaderFragment.newInstance(
                     ((FragmentActivity) mImageViewProductPhoto.getContext()).getSupportFragmentManager(), position)
-                    .executeAndUpdate(mImageViewProductPhoto, salesLite.getDefaultImageUri(), position);*/
+                    .executeAndUpdate(mImageViewProductPhoto, salesLite.getDefaultImageUri(), position);
             //Bind the Product Category
             mTextViewProductCategory.setText(salesLite.getCategoryName());
 

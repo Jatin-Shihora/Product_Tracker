@@ -129,15 +129,20 @@ public class ProductListPresenter
      * Method that registers the Content Observer to notify the changes in Products data
      * */
     private void registerContentObserver(){
-        if (mProductContentObserver != null){
-            //When observer is not initialized
-            //Create the observer instance
+        if (mProductContentObserver == null) {
+            //When Observer is not initialized
+
+            //Create the Observer Instance
             mProductContentObserver = new ProductContentObserver();
             //Register the Content Observer to monitor the Products URI and its descendants
-            mStoreRepository.registerContentObserver(mProductContentObserver.OBSERVER_URI,true,mProductContentObserver);
-        }else {
-            //When Observer is already initialized , reset the observer to receive future notifications again
-            Objects.requireNonNull(mProductContentObserver).resetObserver();
+            mStoreRepository.registerContentObserver(mProductContentObserver.OBSERVER_URI,
+                    true,
+                    mProductContentObserver
+            );
+
+        } else {
+            //When Observer is already initialized, reset the observer to receive future notifications again
+            mProductContentObserver.resetObserver();
         }
     }
 

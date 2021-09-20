@@ -40,7 +40,7 @@ import static com.jatin.producttracker.data.local.utils.SqliteUtility.SUM;
  *
  * @author Jatin C Shihora
  */
-public class QueryArgsUtility {
+public final class QueryArgsUtility {
 
     /**
      * Private Constructor to prevent direct instantiation of {@link QueryArgsUtility}

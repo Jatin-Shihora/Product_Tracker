@@ -45,7 +45,7 @@ public class ProductContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI} for the list of items
-         * 'vnd.android.cursor.dir/com.example.kaushiknsanji.storeapp.provider.item
+         * 'vnd.android.cursor.dir/producttracker.provider.item
          */
         public static final String CONTENT_LIST_TYPE
                 = ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "." + PATH_ITEM;
@@ -66,7 +66,7 @@ public class ProductContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI_SHORT_INFO} for the list of items with short relationship information
-         * 'vnd.android.cursor.dir/com.example.kaushiknsanji.storeapp.provider.item.short
+         * 'vnd.android.cursor.dir/provider.item.short
          */
         public static final String CONTENT_LIST_TYPE_SHORT_INFO
                 = CONTENT_LIST_TYPE + "." + PATH_SHORT_INFO;
@@ -79,7 +79,7 @@ public class ProductContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI_ITEM_SKU} for a single item identified by the Item SKU
-         * 'vnd.android.cursor.item/com.example.kaushiknsanji.storeapp.provider.item.sku
+         * 'vnd.android.cursor.item/provider.item.sku
          */
         public static final String CONTENT_ITEM_TYPE_SKU
                 = CONTENT_ITEM_TYPE + "." + PATH_ITEM_SKU;
@@ -151,14 +151,14 @@ public class ProductContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI} for the list of categories
-         * 'vnd.android.cursor.dir/com.example.kaushiknsanji.storeapp.provider.category
+         * 'vnd.android.cursor.dir/provider.category
          */
         public static final String CONTENT_LIST_TYPE
                 = ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "." + PATH_CATEGORY;
 
         /**
          * The MIME Type of the {@link #CONTENT_URI} for a single category
-         * 'vnd.android.cursor.item/com.example.kaushiknsanji.storeapp.provider.category
+         * 'vnd.android.cursor.item/provider.category
          */
         public static final String CONTENT_ITEM_TYPE
                 = ContentResolver.CURSOR_ITEM_BASE_TYPE + "/" + CONTENT_AUTHORITY + "." + PATH_CATEGORY;
@@ -234,7 +234,7 @@ public class ProductContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI} for the list of images
-         * 'vnd.android.cursor.dir/com.example.kaushiknsanji.storeapp.provider.item.image
+         * 'vnd.android.cursor.dir/provider.item.image
          */
         public static final String CONTENT_LIST_TYPE
                 = ContentResolver.CURSOR_DIR_BASE_TYPE
@@ -242,7 +242,7 @@ public class ProductContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI} for a single image
-         * 'vnd.android.cursor.item/com.example.kaushiknsanji.storeapp.provider.item.image
+         * 'vnd.android.cursor.item/provider.item.image
          */
         public static final String CONTENT_ITEM_TYPE
                 = ContentResolver.CURSOR_ITEM_BASE_TYPE
@@ -304,7 +304,7 @@ public class ProductContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI} for the list of Item Attributes
-         * 'vnd.android.cursor.dir/com.example.kaushiknsanji.storeapp.provider.item.attr
+         * 'vnd.android.cursor.dir/provider.item.attr
          */
         public static final String CONTENT_LIST_TYPE
                 = ContentResolver.CURSOR_DIR_BASE_TYPE
@@ -312,7 +312,7 @@ public class ProductContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI} for a single Item Attribute
-         * 'vnd.android.cursor.item/com.example.kaushiknsanji.storeapp.provider.item.attr
+         * 'vnd.android.cursor.item/provider.item.attr
          */
         public static final String CONTENT_ITEM_TYPE
                 = ContentResolver.CURSOR_ITEM_BASE_TYPE

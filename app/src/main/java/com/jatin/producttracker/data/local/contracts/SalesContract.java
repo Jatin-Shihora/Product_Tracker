@@ -58,14 +58,14 @@ public class SalesContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI} for the list of items and its suppliers
-         * 'vnd.android.cursor.dir/com.example.kaushiknsanji.storeapp.provider.salesinfo
+         * 'vnd.android.cursor.dir/provider.salesinfo
          */
         public static final String CONTENT_LIST_TYPE
                 = ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "." + PATH_ITEM_SUPPLIER_INFO;
 
         /**
          * The MIME Type of the {@link #CONTENT_URI} for a single item and its suppliers
-         * 'vnd.android.cursor.item/com.example.kaushiknsanji.storeapp.provider.salesinfo
+         * 'vnd.android.cursor.item/provider.salesinfo
          */
         public static final String CONTENT_ITEM_TYPE
                 = ContentResolver.CURSOR_ITEM_BASE_TYPE + "/" + CONTENT_AUTHORITY + "." + PATH_ITEM_SUPPLIER_INFO;
@@ -77,7 +77,7 @@ public class SalesContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI_SUPPLIER_ITEMS} for the list of items of a given supplier
-         * 'vnd.android.cursor.dir/com.example.kaushiknsanji.storeapp.provider.salesinfo.supplier
+         * 'vnd.android.cursor.dir/provider.salesinfo.supplier
          */
         public static final String CONTENT_LIST_TYPE_SUPPLIER_ITEMS
                 = CONTENT_LIST_TYPE + "." + SupplierContract.PATH_SUPPLIER;
@@ -89,7 +89,7 @@ public class SalesContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI_ITEM_SUPPLIERS} for the list of suppliers of a given item
-         * 'vnd.android.cursor.dir/com.example.kaushiknsanji.storeapp.provider.salesinfo.item
+         * 'vnd.android.cursor.dir/provider.salesinfo.item
          */
         public static final String CONTENT_LIST_TYPE_ITEM_SUPPLIERS
                 = CONTENT_LIST_TYPE + "." + ProductContract.PATH_ITEM;
@@ -135,14 +135,14 @@ public class SalesContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI} for the list of items and its suppliers
-         * 'vnd.android.cursor.dir/com.example.kaushiknsanji.storeapp.provider.salesinventory
+         * 'vnd.android.cursor.dir/provider.salesinventory
          */
         public static final String CONTENT_LIST_TYPE
                 = ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "." + PATH_ITEM_SUPPLIER_INVENTORY;
 
         /**
          * The MIME Type of the {@link #CONTENT_URI} for a single item and its suppliers
-         * 'vnd.android.cursor.item/com.example.kaushiknsanji.storeapp.provider.salesinventory
+         * 'vnd.android.cursor.item/provider.salesinventory
          */
         public static final String CONTENT_ITEM_TYPE
                 = ContentResolver.CURSOR_ITEM_BASE_TYPE + "/" + CONTENT_AUTHORITY + "." + PATH_ITEM_SUPPLIER_INVENTORY;
@@ -153,7 +153,7 @@ public class SalesContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI_INV_SUPPLIER} for the list of items of a given supplier
-         * 'vnd.android.cursor.dir/com.example.kaushiknsanji.storeapp.provider.salesinventory.supplier
+         * 'vnd.android.cursor.dir/provider.salesinventory.supplier
          */
         public static final String CONTENT_LIST_TYPE_INV_SUPPLIER
                 = CONTENT_LIST_TYPE + "." + SupplierContract.PATH_SUPPLIER;
@@ -164,7 +164,7 @@ public class SalesContract implements StoreContract{
 
         /**
          * The MIME Type of the {@link #CONTENT_URI_INV_ITEM} for the list of suppliers of a given item
-         * 'vnd.android.cursor.dir/com.example.kaushiknsanji.storeapp.provider.salesinventory.item
+         * 'vnd.android.cursor.dir/provider.salesinventory.item
          */
         public static final String CONTENT_LIST_TYPE_INV_ITEM
                 = CONTENT_LIST_TYPE + "." + ProductContract.PATH_ITEM;
@@ -178,7 +178,7 @@ public class SalesContract implements StoreContract{
         /**
          * The MIME Type of the {@link #CONTENT_URI_SHORT_INFO} for the list of items + suppliers
          * with short relationship information from 'item_supplier_inventory' Table
-         * 'vnd.android.cursor.dir/com.example.kaushiknsanji.storeapp.provider.salesinventory.short
+         * 'vnd.android.cursor.dir/provider.salesinventory.short
          */
         public static final String CONTENT_LIST_TYPE_SHORT_INFO
                 = CONTENT_LIST_TYPE + "." + PATH_SHORT_INFO;

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -166,15 +167,11 @@ public class ProductListFragment extends Fragment implements ProductListContract
             @Override
             public void onItemsAdded(@NonNull RecyclerView recyclerView, int positionStart, int itemCount) {
                 if (getChildCount() > 0 && itemCount == 1) {
-                    //When there are some items visible and numbers of items added is 1
+                    //When there are some items visible and number of items added is 1
 
-                    if (positionStart == getItemCount() - 1 && getItemCount() > 1) {
-                        //when there are more than one Item and Item View added is in the last position
-
-                        //Remove the previous Item View cache from RecyclerView to reload the Item View
-                        //with proper item decoration height
-                        removeView(findViewByPosition(positionStart - 1));
-                    }
+                    //Remove all the Item Views from RecyclerView to reload the Item Views
+                    //with proper item decoration height
+                    new Handler().postDelayed(this::removeAllViews, 2);
                 }
             }
 
@@ -188,14 +185,11 @@ public class ProductListFragment extends Fragment implements ProductListContract
             @Override
             public void onItemsRemoved(@NonNull RecyclerView recyclerView, int positionStart, int itemCount) {
                 if (getChildCount() > 0 && itemCount == 1) {
-                    //When there are some items visible and number of items added is 1
+                    //When there are some items visible and number of items removed is 1
 
-                    if (positionStart == getItemCount() && getItemCount()>1){
-                        //when there are more than one Item View and the Item View removed is last position
-
-                        //Remove the previous Item View cache from RecyclerView to reload the Item View with proper item decoration height
-                        removeView(findViewByPosition(positionStart-1));
-                    }
+                    //Remove all the Item Views from RecyclerView to reload the Item Views
+                    //with proper item decoration height
+                    new Handler().postDelayed(this::removeAllViews, 2);
                 }
             }
 
@@ -219,7 +213,7 @@ public class ProductListFragment extends Fragment implements ProductListContract
 
     /**
      * Called when the fragment is visible to the user and actively running .
-     * This is generally tied to {link Activity Activity.onResume()} of the containing
+     * This is generally tied to {@link Activity Activity.onResume()} of the containing
      * Activity's lifecycle .
      * */
     @Override

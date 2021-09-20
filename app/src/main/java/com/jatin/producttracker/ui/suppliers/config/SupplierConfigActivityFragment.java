@@ -51,8 +51,10 @@ import com.jatin.producttracker.ui.BasePresenter;
 import com.jatin.producttracker.ui.BaseView;
 import com.jatin.producttracker.ui.common.ProgressDialogFragment;
 import com.jatin.producttracker.ui.products.config.ProductConfigActivity;
+import com.jatin.producttracker.utils.ContactUtility;
 import com.jatin.producttracker.utils.OrientationUtility;
 import com.jatin.producttracker.utils.SnackbarUtility;
+import com.jatin.producttracker.workers.ImageDownloaderFragment;
 
 import java.util.ArrayList;
 import java.util.Currency;
@@ -1423,8 +1425,8 @@ public class SupplierConfigActivityFragment extends Fragment
                     //Setting the Hint Text to show
                     mTextInputContact.setHint(mContactType);
                     //Setting the Max Length to Email
- //                   int emailMaxLength = ContactUtility.getEmailMaxLength();
- //                   mEditTextContact.setFilters(new InputFilter[]{new InputFilter.LengthFilter(emailMaxLength)});
+                    int emailMaxLength = ContactUtility.getEmailMaxLength();
+                    mEditTextContact.setFilters(new InputFilter[]{new InputFilter.LengthFilter(emailMaxLength)});
                 }
 
                 //Registering click listener on ImageButton (for Removing Contact) and the ImageView (for Defaulting Contact)
@@ -1501,7 +1503,7 @@ public class SupplierConfigActivityFragment extends Fragment
                                     //Update it to the current contact data
                                     if (mContactType.equals(SupplierContract.SupplierContactType.CONTACT_TYPE_PHONE)) {
                                         //Retrieving the actual number for the Phone Contact Type
-                            //            contactValue = ContactUtility.convertAndStripPhoneNumber(contactValue);
+                                        contactValue = ContactUtility.convertAndStripPhoneNumber(contactValue);
                                     }
                                     supplierContact.setValue(contactValue);
 
@@ -1559,7 +1561,7 @@ public class SupplierConfigActivityFragment extends Fragment
 
                 if (mContactType.equals(SupplierContract.SupplierContactType.CONTACT_TYPE_PHONE)) {
                     //For "Phone" Contact Type
-                    /*if (!ContactUtility.isValidPhoneNumber(contactValue)) {
+                    if (!ContactUtility.isValidPhoneNumber(contactValue)) {
                         //When the Phone Number is invalid
 
                         //Display the invalid error on the TextInputLayout
@@ -1569,11 +1571,11 @@ public class SupplierConfigActivityFragment extends Fragment
                         mTextInputContact.invalidate();
                         //Returning False to indicate that the Contact value is invalid
                         return false;
-                    }*/
+                    }
 
                 } else if (mContactType.equals(SupplierContract.SupplierContactType.CONTACT_TYPE_EMAIL)) {
                     //For "Email" Contact Type
-/*                    if (!ContactUtility.isValidEmail(contactValue)) {
+                    if (!ContactUtility.isValidEmail(contactValue)) {
                         //When Email is invalid
 
                         //Display the invalid error on the TextInputLayout
@@ -1583,7 +1585,7 @@ public class SupplierConfigActivityFragment extends Fragment
                         mTextInputContact.invalidate();
                         //Returning False to indicate that the Contact value is invalid
                         return false;
-                    }*/
+                    }
                 }
                 //Returning True when the Contact value is valid
                 return true;
@@ -1601,7 +1603,8 @@ public class SupplierConfigActivityFragment extends Fragment
                 int noOfTrackedContacts = mTrackerContactValuesSparseArray.size();
                 //Iterating over the SparseArray Tracker to check if the contact value is a duplicate
                 for (int index = 0; index < noOfTrackedContacts; index++) {
-                    if (mTrackerContactValuesSparseArray.valueAt(index).equals(contactValue)
+                    if (mTrackerContactValuesSparseArray.valueAt(index) != null
+                            && mTrackerContactValuesSparseArray.valueAt(index).equals(contactValue)
                             && mTrackerContactValuesSparseArray.keyAt(index) != position) {
                         //Returning true when the Contact value is duplicated
                         //and is not for the same item view position
@@ -2065,9 +2068,9 @@ public class SupplierConfigActivityFragment extends Fragment
                     //Set Barcode typeface for the SKU
                     mTextViewProductSku.setTypeface(mProductSkuTypeface);
                     //Download and Bind the Product Photo at the position
-                    /*ImageDownloaderFragment.newInstance(
+                    ImageDownloaderFragment.newInstance(
                             ((FragmentActivity) mImageViewProductPhoto.getContext()).getSupportFragmentManager(), position)
-                            .executeAndUpdate(mImageViewProductPhoto, productLite.getDefaultImageUri(), position);*/
+                            .executeAndUpdate(mImageViewProductPhoto, productLite.getDefaultImageUri(), position);
                     //Bind the Product Category
                     mTextViewProductCategory.setText(productLite.getCategory());
                 }

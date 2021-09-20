@@ -5,6 +5,7 @@ import androidx.core.app.ActivityOptionsCompat;
 
 import com.jatin.producttracker.data.local.models.ProductLite;
 import com.jatin.producttracker.ui.products.config.ProductConfigActivity;
+import com.jatin.producttracker.ui.suppliers.product.SupplierProductPickerActivity;
 
 import java.util.ArrayList;
 
@@ -43,7 +44,7 @@ public interface SupplierConfigNavigator {
     /**
      * Method invoked when the user clicks on the "Add Item" button, present under "Supplier Items"
      * to add/link items to the Supplier. This should launch the
-     * {@@link SupplierProductPickerActivity}
+     * {@link SupplierProductPickerActivity}
      * to pick the Products for the Supplier to sell.
      *
      * @param productLiteList ArrayList of Products {@link ProductLite} already picked for the Supplier to sell.

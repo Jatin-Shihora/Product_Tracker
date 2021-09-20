@@ -1,5 +1,6 @@
 package com.jatin.producttracker.ui.inventory.config;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -365,10 +366,10 @@ public class SalesConfigActivity extends AppCompatActivity implements SalesConfi
      * @param data        An Intent, which can return result data to the caller
      *                    (various data can be attached to Intent "extras").
      */
+    @SuppressLint("MissingSuperCall")
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         //Delegating to the Presenter to handle
-        super.onActivityResult(requestCode, resultCode, data);
         mPresenter.onActivityResult(requestCode, resultCode, data);
     }
 }

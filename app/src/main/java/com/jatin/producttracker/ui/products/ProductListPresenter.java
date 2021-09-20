@@ -34,6 +34,7 @@ import com.jatin.producttracker.ui.products.config.ProductConfigActivity;
 import com.jatin.producttracker.utils.AppConstants;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**
@@ -136,7 +137,7 @@ public class ProductListPresenter
             mStoreRepository.registerContentObserver(mProductContentObserver.OBSERVER_URI,true,mProductContentObserver);
         }else {
             //When Observer is already initialized , reset the observer to receive future notifications again
-            mProductContentObserver.resetObserver();
+            Objects.requireNonNull(mProductContentObserver).resetObserver();
         }
     }
 

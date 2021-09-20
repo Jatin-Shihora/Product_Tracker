@@ -6,6 +6,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
@@ -16,6 +17,7 @@ import android.view.View;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 import com.jatin.producttracker.R;
+import com.jatin.producttracker.cache.BitmapImageCache;
 import com.jatin.producttracker.ui.about.AboutActivity;
 import com.jatin.producttracker.ui.inventory.SalesListFragment;
 import com.jatin.producttracker.ui.products.ProductListFragment;
@@ -192,7 +194,11 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
     }
 
     /**
-     * Called by the Activity when it is prepared to be shown */
+     * Called when the fragment is visible to the user and actively running.
+     * This is generally
+     * tied to {@link Activity#onResume() Activity.onResume} of the containing
+     * Activity's lifecycle.
+     */
     @Override
     protected void onResume() {
         super.onResume();
@@ -349,6 +355,6 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
         super.onDestroy();
 
         //clearing the Bitmap cache if any
-
+        BitmapImageCache.clearCache();
     }
 }

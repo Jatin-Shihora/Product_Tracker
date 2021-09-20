@@ -8,7 +8,7 @@ import android.os.Parcelable;
  *
  * @author Jatin C Shihora
  */
-public class ProductAttribute implements Parcelable {
+public class ProductAttribute implements Parcelable, Cloneable{
     /**
      * Implementation of {@link android.os.Parcelable.Creator} interface
      * to generate instances of this Parcelable class {@link ProductAttribute} from a {@link Parcel}
@@ -123,6 +123,33 @@ public class ProductAttribute implements Parcelable {
      */
     public void setAttributeValue(String attributeValue) {
         mAttributeValue = attributeValue;
+    }
+
+    /**
+     * Indicates whether some other object is "equal to" this one.
+     *
+     * @param o The reference object with which to compare.
+     * @return <b>TRUE</b> if this object is the same as the {@code o}
+     * argument; <b>FALSE</b> otherwise.
+     */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ProductAttribute that = (ProductAttribute) o;
+        if (!mAttributeName.equals(that.mAttributeName)) return false;
+        return mAttributeValue.equals(that.mAttributeValue);
+    }
+    /**
+     * Returns a hash code value for the object.
+     *
+     * @return A hash code value for this object.
+     */
+    @Override
+    public int hashCode() {
+        int result = mAttributeName.hashCode();
+        result = 31 * result + mAttributeValue.hashCode();
+        return result;
     }
 
     /**

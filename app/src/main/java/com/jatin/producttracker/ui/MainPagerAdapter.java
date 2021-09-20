@@ -136,10 +136,28 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
     private void initPresenter(Fragment fragment){
         if (fragment instanceof ProductListFragment) {
             //Creating the ProductListFragment's Presenter
+            ProductListPresenter presenter = new ProductListPresenter(
+                    LoaderProvider.getInstance(mContext),
+                    ((FragmentActivity) mContext).getSupportLoaderManager(),
+                    InjectorUtility.provideStoreRepository(mContext),
+                    (ProductListFragment) fragment
+            );
         } else if (fragment instanceof SupplierListFragment) {
             //Creating the SupplierListFragment's Presenter
+            SupplierListPresenter presenter = new SupplierListPresenter(
+                    LoaderProvider.getInstance(mContext),
+                    ((FragmentActivity) mContext).getSupportLoaderManager(),
+                    InjectorUtility.provideStoreRepository(mContext),
+                    (SupplierListFragment) fragment
+            );
         } else if (fragment instanceof SalesListFragment) {
             //Creating the SalesListFragment's Presenter
+            SalesListPresenter presenter = new SalesListPresenter(
+                    LoaderProvider.getInstance(mContext),
+                    ((FragmentActivity) mContext).getSupportLoaderManager(),
+                    InjectorUtility.provideStoreRepository(mContext),
+                    (SalesListFragment) fragment
+            );
         }
     }
 
@@ -291,15 +309,15 @@ public class MainPagerAdapter extends FragmentStatePagerAdapter {
             //Finding the Group that has Icon with Title
             Group groupIconTitle = rootView.findViewById(R.id.group_main_tab_icon_title);
 
-  /*          if (visibility) {
-                //When TRUE, show the Group and hide the temporary icon
-                groupIconTitle.setVisibilty(View.VISIBLE);
-                imageViewTabIconTemp.setVisibilty(View.GONE);
+            if (visibility) {
+                //When TRUE, show the Group and hide the temporary Icon
+                groupIconTitle.setVisibility(View.VISIBLE);
+                imageViewTabIconTemp.setVisibility(View.GONE);
             } else {
                 //When FALSE, hide the Group and show the temporary Icon
-                groupIconTitle.setVisibilty(View.INVISIBLE);
-                imageViewTabIconTemp.setVisibilty(View.VISIBLE);
-            }*/
+                groupIconTitle.setVisibility(View.INVISIBLE);
+                imageViewTabIconTemp.setVisibility(View.VISIBLE);
+            }
         }
     }
 

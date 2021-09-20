@@ -60,7 +60,7 @@ public class SalesListFragment extends Fragment implements SalesListContract.Vie
     //The Presenter interface for this View
     private SalesListContract.Presenter mPresenter ;
 
-    //References to the Views shoe=wn in this Fragment
+    //References to the Views shown in this Fragment
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerViewContentList;
     private Group mGroupEmptyList;
@@ -202,8 +202,9 @@ public class SalesListFragment extends Fragment implements SalesListContract.Vie
 
     /**
      * Called when the fragment is visible to the users and actively running .
-     * This is generally tied to {@link Activity# Activity.onResume()} of the containing Activity's lifecycle
+     * This is generally tied to {@link Activity#  Activity.onResume()} of the containing Activity's lifecycle
      * */
+
     @Override
     public void onResume() {
         super.onResume();

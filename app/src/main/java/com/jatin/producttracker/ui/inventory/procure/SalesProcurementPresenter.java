@@ -1,5 +1,7 @@
 package com.jatin.producttracker.ui.inventory.procure;
 
+import android.text.TextUtils;
+
 import androidx.annotation.NonNull;
 
 import com.jatin.producttracker.R;
@@ -311,6 +313,11 @@ public class SalesProcurementPresenter implements SalesProcurementContract.Prese
                 //Adding to the CC Address List when it is NOT a defaulted Email Contact
                 ccAddressList.add(emailContact.getValue());
             }
+        }
+
+        //Defaulting the required quantity to 0 when no quantity has been provided
+        if (TextUtils.isEmpty(requiredQuantityStr)) {
+            requiredQuantityStr = "0";
         }
 
         //Preparing the Subject Arguments

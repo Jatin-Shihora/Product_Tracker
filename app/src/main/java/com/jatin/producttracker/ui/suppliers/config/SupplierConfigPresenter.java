@@ -21,6 +21,8 @@ import com.jatin.producttracker.data.local.models.SupplierContact;
 import com.jatin.producttracker.ui.BaseView;
 import com.jatin.producttracker.ui.products.config.ProductConfigActivity;
 import com.jatin.producttracker.ui.products.config.ProductConfigContract;
+import com.jatin.producttracker.ui.suppliers.product.SupplierProductPickerActivity;
+import com.jatin.producttracker.utils.ContactUtility;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -461,7 +463,7 @@ public class SupplierConfigPresenter implements SupplierConfigContract.Presenter
         if (resultCode > FragmentActivity.RESULT_FIRST_USER) {
             //When we have a success result from an Activity
 
-/*            if (requestCode == SupplierProductPickerActivity.REQUEST_SUPPLIER_PRODUCTS
+            if (requestCode == SupplierProductPickerActivity.REQUEST_SUPPLIER_PRODUCTS
                     && resultCode == SupplierProductPickerActivity.RESULT_SUPPLIER_PRODUCTS) {
                 //When the result is from the SupplierProductPickerActivity for Supplier's Products
 
@@ -471,7 +473,7 @@ public class SupplierConfigPresenter implements SupplierConfigContract.Presenter
                     updateSupplierProducts(productList);
                 }
 
-            }*/
+            }
             /*else if*/ if (requestCode == ProductConfigActivity.REQUEST_EDIT_PRODUCT) {
                 //For an Edit Product request
                 if (resultCode == ProductConfigActivity.RESULT_EDIT_PRODUCT) {
@@ -704,7 +706,7 @@ public class SupplierConfigPresenter implements SupplierConfigContract.Presenter
         for (SupplierContact supplierContact : supplierContacts) {
             if (contactType.equals(SupplierContract.SupplierContactType.CONTACT_TYPE_PHONE)) {
                 //For "Phone" Contact Type, checking the validity of the Phone Number
-                /*if (!ContactUtility.isValidPhoneNumber(supplierContact.getValue())) {
+                if (!ContactUtility.isValidPhoneNumber(supplierContact.getValue())) {
                     //When Phone Number is invalid
 
                     //Hide Progress Indicator
@@ -712,10 +714,10 @@ public class SupplierConfigPresenter implements SupplierConfigContract.Presenter
                     mSupplierConfigView.showSupplierContactsInvalidError(invalidMessageResId);
                     //Returning False to indicate the error
                     return false;
-                }*/
-            } /*else*/ if (contactType.equals(SupplierContract.SupplierContactType.CONTACT_TYPE_EMAIL)) {
+                }
+            } else if (contactType.equals(SupplierContract.SupplierContactType.CONTACT_TYPE_EMAIL)) {
                 //For "Email" Contact Type, checking the validity of the Email
-/*                if (!ContactUtility.isValidEmail(supplierContact.getValue())) {
+                if (!ContactUtility.isValidEmail(supplierContact.getValue())) {
                     //When Email is invalid
 
                     //Hide Progress Indicator
@@ -723,7 +725,7 @@ public class SupplierConfigPresenter implements SupplierConfigContract.Presenter
                     mSupplierConfigView.showSupplierContactsInvalidError(invalidMessageResId);
                     //Returning False to indicate the error
                     return false;
-                }*/
+                }
             }
         }
         //Returning True when everything is valid
@@ -1011,7 +1013,7 @@ public class SupplierConfigPresenter implements SupplierConfigContract.Presenter
     /**
      * Method invoked when the user clicks on the "Add Item" button, present under "Supplier Items"
      * to add/link items to the Supplier. This should launch the
-     * {@@link SupplierProductPickerActivity}
+     * {@link SupplierProductPickerActivity}
      * to pick the Products for the Supplier to sell.
      *
      * @param productLiteList ArrayList of Products {@link ProductLite} already picked for the Supplier to sell.

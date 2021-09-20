@@ -1,5 +1,6 @@
 package com.jatin.producttracker.ui.suppliers.config;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -15,6 +16,7 @@ import androidx.fragment.app.FragmentManager;
 import com.jatin.producttracker.R;
 import com.jatin.producttracker.data.local.models.ProductLite;
 import com.jatin.producttracker.ui.products.config.ProductConfigActivity;
+import com.jatin.producttracker.ui.suppliers.product.SupplierProductPickerActivity;
 import com.jatin.producttracker.utils.InjectorUtility;
 
 import java.util.ArrayList;
@@ -238,19 +240,19 @@ public class SupplierConfigActivity extends AppCompatActivity implements Supplie
     /**
      * Method invoked when the user clicks on the "Add Item" button, present under "Supplier Items"
      * to add/link items to the Supplier. This should launch the
-     * {@@link SupplierProductPickerActivity} to pick the Products for the Supplier to sell.
+     * {@link SupplierProductPickerActivity} to pick the Products for the Supplier to sell.
      *
      * @param productLiteList ArrayList of Products {@link ProductLite} already picked for the Supplier to sell.
      */
     @Override
     public void launchPickProducts(ArrayList<ProductLite> productLiteList) {
-/*        //Creating an Intent to launch the SupplierProductPickerActivity
+        //Creating an Intent to launch the SupplierProductPickerActivity
         Intent productPickerIntent = new Intent(this, SupplierProductPickerActivity.class);
         //Passing the Product list already registered for selling
         productPickerIntent.putExtra(SupplierProductPickerActivity.EXTRA_SUPPLIER_PRODUCTS, productLiteList);
         //Starting the activity with result
         startActivityForResult(productPickerIntent, SupplierProductPickerActivity.REQUEST_SUPPLIER_PRODUCTS);
-   */
+
     }
 
     /**
@@ -265,10 +267,11 @@ public class SupplierConfigActivity extends AppCompatActivity implements Supplie
      * @param data        An Intent, which can return result data to the caller
      *                    (various data can be attached to Intent "extras").
      */
+    @SuppressLint("MissingSuperCall")
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         //Delegating to the Presenter to handle
-        super.onActivityResult(requestCode, resultCode, data);
+
         mPresenter.onActivityResult(requestCode, resultCode, data);
     }
 

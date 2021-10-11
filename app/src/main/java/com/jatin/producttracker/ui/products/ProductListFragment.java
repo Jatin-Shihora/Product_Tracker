@@ -12,12 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.content.res.AppCompatResources;
+import androidx.constraintlayout.widget.Group;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.Fragment;
@@ -30,20 +30,14 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.jatin.producttracker.R;
-import com.jatin.producttracker.data.local.models.Product;
 import com.jatin.producttracker.data.local.models.ProductLite;
 import com.jatin.producttracker.ui.BasePresenter;
 import com.jatin.producttracker.ui.BaseView;
 import com.jatin.producttracker.ui.common.ListItemSpacingDecoration;
-import com.jatin.producttracker.ui.inventory.SalesListContract;
-import com.jatin.producttracker.ui.inventory.SalesListFragment;
 import com.jatin.producttracker.ui.products.config.ProductConfigActivity;
 import com.jatin.producttracker.utils.ColorUtility;
-import com.jatin.producttracker.ui.products.ProductListContract.Presenter;
 import com.jatin.producttracker.utils.SnackbarUtility;
 import com.jatin.producttracker.workers.ImageDownloaderFragment;
-
-import androidx.constraintlayout.widget.Group;
 
 import java.util.ArrayList;
 

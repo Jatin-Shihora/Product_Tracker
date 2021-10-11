@@ -1,7 +1,6 @@
 package com.jatin.producttracker.ui.products.config;
 
 import android.content.Intent;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -12,8 +11,6 @@ import com.jatin.producttracker.data.local.models.ProductAttribute;
 import com.jatin.producttracker.data.local.models.ProductImage;
 import com.jatin.producttracker.ui.BasePresenter;
 import com.jatin.producttracker.ui.BaseView;
-import com.jatin.producttracker.ui.inventory.SalesListContract;
-import com.jatin.producttracker.ui.products.ProductListContract;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -6,18 +6,19 @@ import android.net.Uri;
 
 import androidx.annotation.NonNull;
 
-import com.jatin.producttracker.data.local.contracts.ProductContract;
 import com.jatin.producttracker.data.local.contracts.ProductContract.ProductCategory;
-import com.jatin.producttracker.data.local.contracts.SalesContract;
 import com.jatin.producttracker.data.local.contracts.SalesContract.ProductSupplierInfo;
-import com.jatin.producttracker.data.local.contracts.SupplierContract;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.jatin.producttracker.data.local.contracts.ProductContract.*;
-import static com.jatin.producttracker.data.local.contracts.SalesContract.*;
-import static com.jatin.producttracker.data.local.contracts.SupplierContract.*;
+import static com.jatin.producttracker.data.local.contracts.ProductContract.Product;
+import static com.jatin.producttracker.data.local.contracts.ProductContract.ProductAttribute;
+import static com.jatin.producttracker.data.local.contracts.ProductContract.ProductImage;
+import static com.jatin.producttracker.data.local.contracts.SalesContract.ProductSupplierInventory;
+import static com.jatin.producttracker.data.local.contracts.SupplierContract.Supplier;
+import static com.jatin.producttracker.data.local.contracts.SupplierContract.SupplierContact;
+import static com.jatin.producttracker.data.local.contracts.SupplierContract.SupplierContactType;
 import static com.jatin.producttracker.data.local.utils.SqliteUtility.AND;
 import static com.jatin.producttracker.data.local.utils.SqliteUtility.AS;
 import static com.jatin.producttracker.data.local.utils.SqliteUtility.CLOSE_BRACE;

@@ -32,6 +32,7 @@
             android:layout_margin="@dimen/text_product_image_empty_grid_margin"
             android:gravity="center"
             android:text="@string/product_image_empty_text"
+            android:textColor="@android:color/white"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             app:layout_constrainedWidth="true" />
 

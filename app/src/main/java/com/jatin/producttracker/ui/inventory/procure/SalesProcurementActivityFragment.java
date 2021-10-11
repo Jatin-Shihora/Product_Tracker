@@ -31,7 +31,6 @@ import com.jatin.producttracker.ui.BasePresenter;
 import com.jatin.producttracker.ui.BaseView;
 import com.jatin.producttracker.ui.common.ListItemSpacingDecoration;
 import com.jatin.producttracker.ui.common.ProgressDialogFragment;
-import com.jatin.producttracker.utils.IntentUtility;
 import com.jatin.producttracker.utils.SnackbarUtility;
 
 import java.util.ArrayList;

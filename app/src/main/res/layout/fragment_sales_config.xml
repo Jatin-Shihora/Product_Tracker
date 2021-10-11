@@ -195,6 +195,7 @@
             android:layout_marginTop="@dimen/sales_config_same_section_vertical_margin"
             android:gravity="center"
             android:text="@string/sales_config_title_suppliers_section"
+            android:textColor="@android:color/white"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             app:layout_constrainedWidth="true"
             app:layout_constraintEnd_toEndOf="@+id/guideline_sales_config_right_vertical"

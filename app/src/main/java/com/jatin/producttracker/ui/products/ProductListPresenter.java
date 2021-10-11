@@ -1,7 +1,5 @@
 package com.jatin.producttracker.ui.products;
 
-import android.content.Context;
-import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.UriMatcher;
 import android.database.ContentObserver;
@@ -12,13 +10,11 @@ import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Looper;
 import android.util.Log;
-import android.widget.CursorAdapter;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityOptionsCompat;
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
 import androidx.loader.app.LoaderManager;
 import androidx.loader.content.Loader;
 
@@ -34,7 +30,6 @@ import com.jatin.producttracker.ui.products.config.ProductConfigActivity;
 import com.jatin.producttracker.utils.AppConstants;
 
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 /**

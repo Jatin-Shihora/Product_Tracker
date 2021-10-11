@@ -397,7 +397,7 @@
     <!-- Child Style of 'CardView' used for the info content in the About Activity -->
     <style name="AboutInfoCardStyle" parent="CardView">
         <item name="cardCornerRadius">@dimen/card_about_info_corner_radius</item>
-        <item name="cardBackgroundColor">@color/ic_launcher_background</item>
+        <item name="cardBackgroundColor">#2F0237</item>
         <item name="cardUseCompatPadding">true</item>
         <item name="cardPreventCornerOverlap">true</item>
         <item name="cardElevation">@dimen/card_about_info_elevation</item>
@@ -416,7 +416,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">@dimen/card_about_internal_content_margin</item>
         <item name="android:textSize">@dimen/text_about_content_size</item>
-        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textColor">#3C3F41</item>
     </style>
 
 

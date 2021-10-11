@@ -15,7 +15,6 @@ import com.jatin.producttracker.data.local.StoreRepository;
 import com.jatin.producttracker.data.local.models.Product;
 import com.jatin.producttracker.data.local.models.ProductAttribute;
 import com.jatin.producttracker.data.local.models.ProductImage;
-import com.jatin.producttracker.ui.BaseView;
 import com.jatin.producttracker.ui.products.image.ProductImageActivity;
 
 import java.util.ArrayList;

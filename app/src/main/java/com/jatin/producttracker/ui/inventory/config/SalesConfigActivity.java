@@ -27,8 +27,6 @@ import com.jatin.producttracker.ui.suppliers.config.SupplierConfigActivity;
 import com.jatin.producttracker.utils.InjectorUtility;
 import com.jatin.producttracker.workers.ImageDownloaderFragment;
 
-import static android.app.Activity.*;
-
 /**
  * Activity that inflates the layout 'R.layout.activity_sales_config' which displays a content fragment
  * inflated by {@link SalesConfigActivityFragment}

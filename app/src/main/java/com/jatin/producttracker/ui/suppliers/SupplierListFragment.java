@@ -34,11 +34,8 @@ import com.jatin.producttracker.ui.BasePresenter;
 import com.jatin.producttracker.ui.BaseView;
 import com.jatin.producttracker.ui.MainActivity;
 import com.jatin.producttracker.ui.common.ListItemSpacingDecoration;
-import com.jatin.producttracker.ui.suppliers.SupplierListContract;
-import com.jatin.producttracker.ui.suppliers.SupplierListUserActionsListener;
 import com.jatin.producttracker.ui.suppliers.config.SupplierConfigActivity;
 import com.jatin.producttracker.utils.ColorUtility;
-import com.jatin.producttracker.utils.IntentUtility;
 import com.jatin.producttracker.utils.SnackbarUtility;
 
 import java.util.ArrayList;

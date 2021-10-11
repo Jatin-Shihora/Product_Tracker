@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/text_content_page_empty_list_margin_top"
             android:gravity="center"
-            android:textColor="@android:color/black"
+            android:textColor="#FFFFFF"
             android:textSize="@dimen/text_content_page_empty_list_size"
             app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toBottomOf="parent"

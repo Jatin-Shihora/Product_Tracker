@@ -430,13 +430,13 @@ public class SalesProcurementActivityFragment extends Fragment implements SalesP
     public void composeEmail(String toEmailAddress, String[] ccAddresses, int subjectResId,
                              Object[] subjectArgs, int bodyResId, Object[] bodyArgs) {
         //Launching the Email Activity with the details passed
-/*        IntentUtility.composeEmail(
+        IntentUtility.composeEmail(
                 requireActivity(),
                 new String[]{toEmailAddress},
                 ccAddresses,
                 getString(subjectResId, subjectArgs),
                 getString(bodyResId, bodyArgs)
-        );*/
+        );
     }
 
     /**

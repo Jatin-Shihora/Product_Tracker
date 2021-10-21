@@ -458,13 +458,13 @@ public class SupplierListFragment extends Fragment
     @Override
     public void composeEmail(String toEmailAddress) {
         //Launching an Email Activity passing in the Email Address
-/*        IntentUtility.composeEmail(
+         IntentUtility.composeEmail(
                 requireActivity(),
                 new String[]{toEmailAddress},
                 null,
                 null,
                 null
-        );*/
+        );
     }
 
     /**

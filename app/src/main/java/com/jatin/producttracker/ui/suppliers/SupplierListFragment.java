@@ -36,6 +36,7 @@ import com.jatin.producttracker.ui.MainActivity;
 import com.jatin.producttracker.ui.common.ListItemSpacingDecoration;
 import com.jatin.producttracker.ui.suppliers.config.SupplierConfigActivity;
 import com.jatin.producttracker.utils.ColorUtility;
+import com.jatin.producttracker.utils.IntentUtility;
 import com.jatin.producttracker.utils.SnackbarUtility;
 
 import java.util.ArrayList;
@@ -445,7 +446,7 @@ public class SupplierListFragment extends Fragment
     @Override
     public void dialPhoneNumber(String phoneNumber) {
         //Launching the Dialer passing in the Phone Number
- //       IntentUtility.dialPhoneNumber(requireActivity(), phoneNumber);
+        IntentUtility.dialPhoneNumber(requireActivity(), phoneNumber);
     }
 
     /**

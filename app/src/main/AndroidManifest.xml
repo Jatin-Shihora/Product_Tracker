@@ -45,7 +45,10 @@
         <!-- The Main Activity that displays all the Products, Suppliers and the Sales information -->
         <activity
             android:name=".ui.MainActivity"
-            android:theme="@style/AppTheme.Main">
+            android:theme="@style/AppTheme.Main"/>
+
+        <!-- The Splash Activity of the App -->
+        <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

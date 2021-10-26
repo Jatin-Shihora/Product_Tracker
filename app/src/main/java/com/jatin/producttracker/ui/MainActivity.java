@@ -266,11 +266,14 @@ public class MainActivity extends AppCompatActivity implements TabLayout.OnTabSe
 
                 onRefreshMenuClicked();
                 return true;
-            case R.id.action_about :
+
+            //Added comments to just ignore the about section from the app
+            /*case R.id.action_about :
                 //on Click of about
 
                 launchAboutActivity();
-                return true;
+                return true;*/
+
             default:
                 //On other cases o the default menu handling
                 return super.onOptionsItemSelected(item);

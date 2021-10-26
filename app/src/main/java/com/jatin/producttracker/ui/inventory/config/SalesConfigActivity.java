@@ -188,17 +188,13 @@ public class SalesConfigActivity extends AppCompatActivity implements SalesConfi
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         //Handling based on the Menu item selected
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                //For android home/up button
+        if (item.getItemId() == android.R.id.home) {//For android home/up button
 
-                //Propagating the call to the Presenter to do the required action
-                mPresenter.onUpOrBackAction();
-                return true;
-            default:
-                //On other cases, do the default menu handling
-                return super.onOptionsItemSelected(item);
-        }
+            //Propagating the call to the Presenter to do the required action
+            mPresenter.onUpOrBackAction();
+            return true;
+        }//On other cases, do the default menu handling
+        return super.onOptionsItemSelected(item);
     }
 
     /**

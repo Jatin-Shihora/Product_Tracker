@@ -669,40 +669,30 @@ public class SalesListPresenter implements SalesListContract.Presenter,
                     //For the URI of Product and its descendants
 
                     //Trigger notifications based on the URI
-                    switch (uriMatch) {
-                        case ITEM_ID:
+                    if(uriMatch ==ITEM_ID || uriMatch==ITEM_IMAGES_ID){
                             triggerNotification(uri);
-                            break;
-                        case ITEM_IMAGES_ID:
-                            triggerNotification(uri);
-                            break;
                     }
+
                 } else if (mObserverUri.equals(SupplierContract.Supplier.CONTENT_URI)) {
                     //For the URI of Supplier and its descendants
 
                     //Trigger notifications based on the URI
-                    switch (uriMatch) {
-                        case SUPPLIER_ID:
-                            triggerNotification(uri);
-                            break;
+                    if (uriMatch == SUPPLIER_ID) {
+                        triggerNotification(uri);
                     }
                 } else if (mObserverUri.equals(SalesContract.ProductSupplierInfo.CONTENT_URI)) {
                     //For the URI of ProductSupplierInfo and its descendants
 
                     //Trigger notifications based on the URI
-                    switch (uriMatch) {
-                        case SUPPLIER_ITEMS_ID:
-                            triggerNotification(uri);
-                            break;
+                    if (uriMatch == SUPPLIER_ITEMS_ID) {
+                        triggerNotification(uri);
                     }
                 } else if (mObserverUri.equals(SalesContract.ProductSupplierInventory.CONTENT_URI)) {
                     //For the URI of ProductSupplierInventory and its descendants
 
                     //Trigger notifications based on the URI
-                    switch (uriMatch) {
-                        case SALES_INVENTORY_ITEM_ID:
-                            triggerNotification(uri);
-                            break;
+                    if (uriMatch == SALES_INVENTORY_ITEM_ID) {
+                        triggerNotification(uri);
                     }
                 }
 

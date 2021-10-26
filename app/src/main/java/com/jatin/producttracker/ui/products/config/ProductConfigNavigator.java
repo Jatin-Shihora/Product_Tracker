@@ -28,7 +28,7 @@ public interface ProductConfigNavigator {
     void doCancel();
 
     /**
-     * Method that launches the {@@link ProductImageActivity}
+     * Method that launches the {@link com.jatin.producttracker.ui.products.image.ProductImageActivity}
      * when the Add Photo button (R.id.image_product_config_add_photo) on the Product Image is clicked.
      *
      * @param productImages List of {@link com.jatin.producttracker.data.local.models.ProductImage} that stores the URI details of the Images
